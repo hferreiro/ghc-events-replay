@@ -1,0 +1,21 @@
+name:             ghc-events-replay
+version:          0.1
+synopsis:         Tool for profiling replayed parallel programs
+category:         Development, GHC, Debug, Profiling, Trace
+license:          BSD3
+license-file:     LICENSE
+author:           Henrique Ferreiro <hferreiro@udc.es>
+maintainer:       Henrique Ferreiro <hferreiro@udc.es>
+build-type:       Simple
+cabal-version:    >= 1.8
+
+source-repository head
+  type: git
+  location: git@github.com:hferreiro/ghc-events-replay.git
+
+executable replay
+  main-is:          Replay.hs
+  build-depends:    base,
+                    filepath,
+                    containers >= 0.5 && < 0.6,
+                    ghc-events >= 0.4 && < 0.5
